@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
-             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-             xmlns:tns="http://example.com/soap-web-service"
-             targetNamespace="http://example.com/soap-web-service">
+            xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://example.com/soap-web-service"
+            xmlns:tns="http://example.com/soap-web-service">
     <message name="GetHelloRequest">
         <part name="name" type="xsd:string"/>
     </message>
