@@ -7,9 +7,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.ws.config.annotation.EnableWs;
 import org.springframework.ws.transport.http.MessageDispatcherServlet;
-import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
+import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
+import org.springframework.ws.wsdl.wsdl11.Wsdl11Definition;
 
 @EnableWs
 @Configuration
@@ -24,7 +25,7 @@ public class WebServiceConfig {
     }
 
     @Bean(name = "hello")
-    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema helloSchema) {
+    public Wsdl11Definition defaultWsdl11Definition(XsdSchema helloSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("HelloPort");
         wsdl11Definition.setLocationUri("/ws");

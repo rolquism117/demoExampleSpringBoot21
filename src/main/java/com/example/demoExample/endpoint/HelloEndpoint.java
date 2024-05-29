@@ -1,7 +1,5 @@
 package com.example.demoExample.endpoint;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.namespace.QName;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -17,12 +15,14 @@ public class HelloEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "GetHelloRequest")
     @ResponsePayload
-    public JAXBElement<GetHelloResponse> getHello(@RequestPayload JAXBElement<GetHelloRequest> request) {
-        GetHelloRequest getHelloRequest = request.getValue();
+    public GetHelloResponse getHello(@RequestPayload GetHelloRequest request) {
         GetHelloResponse response = new GetHelloResponse();
-        response.setGreeting("Hello, " + getHelloRequest.getName() + "!");
-
-        return new JAXBElement<>(new QName(NAMESPACE_URI, "GetHelloResponse"), GetHelloResponse.class, response);
+        response.setGreeting("Hello, " + request.getName() + "!");
+        return response;
     }
 }
+
+
+
+
 

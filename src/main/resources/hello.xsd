@@ -1,19 +1,14 @@
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
-        xmlns:tns="http://example.com/soap-web-service"
-        targetNamespace="http://example.com/soap-web-service"
-        elementFormDefault="qualified">
-    <element name="GetHelloRequest">
-        <complexType>
-            <sequence>
-                <element name="name" type="string"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="GetHelloResponse">
-        <complexType>
-            <sequence>
-                <element name="greeting" type="string"/>
-            </sequence>
-        </complexType>
-    </element>
-</schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://example.com/soap-web-service" targetNamespace="http://example.com/soap-web-service" elementFormDefault="qualified">
+    <xs:element name="GetHelloRequest" type="tns:GetHelloRequest"/>
+    <xs:element name="GetHelloResponse" type="tns:GetHelloResponse"/>
+    <xs:complexType name="GetHelloRequest">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="GetHelloResponse">
+        <xs:sequence>
+            <xs:element name="greeting" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
