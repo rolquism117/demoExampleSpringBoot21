@@ -31,9 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-src/main/java/com/example/soap_web_service/GetHelloRequest.java
-src/main/java/com/example/soap_web_service/GetHelloRequest.java
-src/main/java/com/example/soap_web_service/GetHelloResponse.java
-src/main/java/com/example/soap_web_service/ObjectFactory.java
-src/main/java/com/example/soap_web_service/package-info.java
-src/main/java/META-INF/sun-jaxb.episode
